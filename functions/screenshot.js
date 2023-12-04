@@ -24,6 +24,7 @@ async function screenshot(url, { format, viewport, dpr = 1, withJs = true, wait,
       deviceScaleFactor: parseFloat(dpr),
     },
     headless: chromium.headless,
+    args: ['--user-agent=screenshot'],
   });
 
   const page = await browser.newPage();
